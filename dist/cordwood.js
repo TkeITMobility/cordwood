@@ -8082,6 +8082,10 @@ bootstrap.init = function (version) {
  * @param url : The native URL for a js or css file to be included in the document.
  **/
 bootstrap.injectFile = function (url) {
+  if (window.Ionic) {
+    url = window.Ionic.normalizeURL(url);
+  }
+
   if (utils.hasFileExtension(url, 'js')) {
     // Create script tag for JS file
     var fileref = document.createElement('script');
