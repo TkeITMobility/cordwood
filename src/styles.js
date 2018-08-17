@@ -32,7 +32,9 @@ styles.jsonCSS = {
   ul: {
     listStyle: 'none',
     margin: '7rem 0 0 0',
-    padding: 0
+    padding: 0,
+    height: '600px',
+    'overflow-y': 'auto'
   },
 
   li: {
