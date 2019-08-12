@@ -43,7 +43,7 @@ bootstrap.init = function (version) {
  **/
 bootstrap.injectFile = function (url) {
   if (window.Ionic) {
-    url = window.Ionic.normalizeURL(url);
+    url = window.Ionic.WebView.convertFileSrc(url);
   }
 
   if (utils.hasFileExtension(url, 'js')) {
